@@ -1,0 +1,295 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/GlobalStyles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="js/jquery-maskedinput.min.js"></script>
+    <script src="js/script.js"></script>
+    <title>Cadastro de Funcionário - Daelly Conffecções</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <a href="#">
+                <div class="logo">
+                    <h1>Daelly Confecções</h1>
+                </div>
+            </a>
+
+            <div class="header-actions">
+                <div class="profile-parent">
+                    <div class="profile-item-children header">
+                        <p class="item icon-content rigth">Perfil<span class="material-symbols-outlined">expand_more</span></p>
+                    </div>
+                    <div class="profile-item-children itens">
+                        <a href="#">
+                            <p class="item icon-content rigth">Sair<span class="material-symbols-outlined">logout</span></p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div id="barra-lateral">
+            <div class="barra-lateral-content">
+                <i class="line-division"></i>
+                <div class="item-parent">
+                    <a href="#" id="i-inicio" class="item-children header no-expansive icon-content left"><span class="material-symbols-outlined">home</span><span>Início</span></a>
+                </div>
+                <div class="item-parent">
+                    <div id="i-tipo" class="item-children header icon-content left"><span class="material-symbols-outlined">category</span><span>Tipo</span></div>
+                    <div id="i-expansive-tipo" class="item-children itens">
+                        <a href="#" class="item icon-content left"><span class="material-symbols-outlined">list</span><span>Tipos</span></a>
+                        <a href="#" class="item icon-content left"><span class="material-symbols-outlined">library_add</span><span>Novo tipo</span></a>
+                    </div>
+                </div>
+                <div class="item-parent">
+                    <div id="i-funcao" class="item-children header icon-content left"><span class="material-symbols-outlined">psychology</span><span>Função</span></div>
+                    <div id="i-expansive-funcao" class="item-children itens">
+                        <a href="#" class="item icon-content left"><span class="material-symbols-outlined">list</span><span>Funções</span></a>
+                        <a href="#" class="item icon-content left"><span class="material-symbols-outlined">library_add</span><span>Nova função</span></a>
+                    </div>
+                </div>
+                <div class="item-parent">
+                    <div id="i-grupo" class="item-children header icon-content left"><span class="material-symbols-outlined">groups</span><span>Grupo</span></div>
+                    <div id="i-expansive-grupo" class="item-children itens">
+                        <a href="#" class="item icon-content left"><span class="material-symbols-outlined">list</span><span>Grupos</span></a>
+                        <a href="#" class="item icon-content left"><span class="material-symbols-outlined">library_add</span><span>Novo grupo</span></a>
+                    </div>
+                </div>
+                <div class="item-parent">
+                    <div id="i-funcionario" class="item-children header icon-content left"><span class="material-symbols-outlined">group</span><span>Funcionário</span></div>
+                    <div id="i-expansive-funcionario" class="item-children itens">
+                        <a href="page-examplo-list.html" class="item icon-content left"><span class="material-symbols-outlined">list</span><span>Funcionários</span></a>
+                        <a href="page-examplo-register.html" class="item icon-content left"><span class="material-symbols-outlined">library_add</span><span>Novo funcionário</span></a>
+                    </div>
+                </div>
+                <div class="item-parent">
+                    <div id="i-maquina-costura" class="item-children header icon-content left"><span class="material-symbols-outlined">tag</span><span>Máquina de Costura</span></div>
+                    <div id="i-expansive-maquina-costura" class="item-children itens">
+                        <a href="#" class="item icon-content left"><span class="material-symbols-outlined">list</span><span>Máquinas de Costura</span></a>
+                        <a href="#" class="item icon-content left"><span class="material-symbols-outlined">library_add</span><span>Máquina de Costura</span></a>
+                    </div>
+                </div>
+                <div class="item-parent">
+                    <div id="i-compressor" class="item-children header icon-content left"><span class="material-symbols-outlined">iron</span><span>Compressor</span></div>
+                    <div id="i-expansive-compressor" class="item-children itens">
+                        <a href="#" class="item icon-content left"><span class="material-symbols-outlined">list</span><span>Compressores</span></a>
+                        <a href="#" class="item icon-content left"><span class="material-symbols-outlined">library_add</span><span>Novo compressor</span></a>
+                    </div>
+                </div>
+                <div class="item-parent">
+                    <div id="i-manutencao" class="item-children header icon-content left"><span class="material-symbols-outlined">build</span><span>Manutenção</span></div>
+                    <div id="i-expansive-manutencao" class="item-children itens">
+                        <a href="#" class="item icon-content left"><span class="material-symbols-outlined">list</span><span>Manutenções</span></a>
+                        <a href="#" class="item icon-content left"><span class="material-symbols-outlined">library_add</span><span>Nova manutenção</span></a>
+                    </div>
+                </div>
+                <i class="line-division"></i>
+            </div>
+        </div>
+
+        <div id="painel-comando">
+            <div class="carregando">
+                Carregando...
+            </div>
+
+            <div class="conteudo">
+                <div class="conteudo-header">
+                    <h2>Funcionário
+                        <h2>
+                </div>
+
+                <div class="conteudo-main">
+                    <form action="" method="POST" id="form">
+                        <input type="hidden" value="" name="id" id="id" />
+                        <input type="hidden" value="" name="acao" id="acao" />
+
+                        <div class="alert alert-success">
+                            <p>Sucesso ao cadastrar o funcionário</p>
+                            <div class="close-alert material-symbols-outlined">close</div>
+                        </div>
+
+                        <div class="alert alert-danger">
+                            <p>Erro ao cadastrar o funcionário</p>
+                            <div class="close-alert material-symbols-outlined">close</div>
+                        </div>
+
+                        <div class="line-division"></div>
+
+                        <div class="actions-form">
+                            <a href="page-examplo-register.html" type="submit" class="bt-action form primary icon-content rigth">Novo<span class="material-symbols-outlined">library_add</span></a>
+                        </div>
+
+                        <div class="line-division"></div>
+
+                        <div class="table-content">
+                            <div class="fill-inputs">
+                                <div class="input-box input-position-left">
+                                    <input type="text" name="filter-table" id="filter-table" autocomplete="off" />
+                                    <label for="filter-table">Busca</label>
+                                    <i></i>
+                                </div>
+                            </div>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Nome</th>
+                                        <th>CPF</th>
+                                        <th>Entrada</th>
+                                        <th>Saída</th>
+                                        <th>Grupo</th>
+                                        <th style="width: 12rem;">Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="table-results">
+                                    <tr>
+                                        <td>
+                                            Funcionário 1
+                                        </td>
+                                        <td>
+                                            100.200.300-46
+                                        </td>
+                                        <td>
+                                            01/01/2001
+                                        </td>
+                                        <td>
+                                            02/01/2001
+                                        </td>
+                                        <td>
+                                            1
+                                        </td>
+                                        <td>
+                                            <div class="actions-form table">
+                                                <a href="#" class="editar bt-action table bt-edit tooltip-content"><span class="material-symbols-outlined">edit_square</span><span class="tooltip">Editar funcionário</span></a>
+                                                <button class="excluir bt-action table bt-remove tooltip-content" rel="#"><span class="material-symbols-outlined">delete</span><span class="tooltip">Excluir funcionário</span></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Funcionário 2
+                                        </td>
+                                        <td>
+                                            100.200.300-47
+                                        </td>
+                                        <td>
+                                            01/01/2001
+                                        </td>
+                                        <td>
+                                            02/01/2001
+                                        </td>
+                                        <td>
+                                            2
+                                        </td>
+                                        <td>
+                                            <div class="actions-form table">
+                                                <a href="#" class="editar bt-action table bt-edit tooltip-content"><span class="material-symbols-outlined">edit_square</span><span class="tooltip">Editar funcionário</span></a>
+                                                <button class="excluir bt-action table bt-remove tooltip-content" rel="#"><span class="material-symbols-outlined">delete</span><span class="tooltip">Excluir funcionário</span></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Funcionário 3
+                                        </td>
+                                        <td>
+                                            100.200.300-48
+                                        </td>
+                                        <td>
+                                            01/01/2001
+                                        </td>
+                                        <td>
+                                            02/01/2001
+                                        </td>
+                                        <td>
+                                            3
+                                        </td>
+                                        <td>
+                                            <div class="actions-form table">
+                                                <a href="#" class="editar bt-action table bt-edit tooltip-content"><span class="material-symbols-outlined">edit_square</span><span class="tooltip">Editar funcionário</span></a>
+                                                <button class="excluir bt-action table bt-remove tooltip-content" rel="#"><span class="material-symbols-outlined">delete</span><span class="tooltip">Excluir funcionário</span></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Funcionário 4
+                                        </td>
+                                        <td>
+                                            100.200.300-49
+                                        </td>
+                                        <td>
+                                            01/01/2001
+                                        </td>
+                                        <td>
+                                            02/01/2001
+                                        </td>
+                                        <td>
+                                            4
+                                        </td>
+                                        <td>
+                                            <div class="actions-form table">
+                                                <a href="#" class="editar bt-action table bt-edit tooltip-content"><span class="material-symbols-outlined">edit_square</span><span class="tooltip">Editar funcionário</span></a>
+                                                <button class="excluir bt-action table bt-remove tooltip-content" rel="#"><span class="material-symbols-outlined">delete</span><span class="tooltip">Excluir funcionário</span></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Funcionário 5
+                                        </td>
+                                        <td>
+                                            100.200.300-40
+                                        </td>
+                                        <td>
+                                            01/01/2001
+                                        </td>
+                                        <td>
+                                            02/01/2001
+                                        </td>
+                                        <td>
+                                            5
+                                        </td>
+                                        <td>
+                                            <div class="actions-form table">
+                                                <a href="#" class="editar bt-action table bt-edit tooltip-content"><span class="material-symbols-outlined">edit_square</span><span class="tooltip">Editar funcionário</span></a>
+                                                <button class="excluir bt-action table bt-remove tooltip-content" rel="#"><span class="material-symbols-outlined">delete</span><span class="tooltip">Excluir funcionário</span></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        $(document).ready(function() {
+            $('#i-funcionario').addClass("active")
+
+            $(".excluir").click(function() {
+                if (confirm("Deseja realmente excluir o registro?")) {
+                    id = $(this).attr("rel");
+                    $("#id").val(id);
+                    $("#form").submit();
+                }
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>
